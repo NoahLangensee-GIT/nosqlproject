@@ -1,5 +1,3 @@
-from ftplib import print_line
-
 from joke import Joke
 from dao_joke import Dao_joke
 
@@ -30,7 +28,7 @@ else:
 if wortspiel_witze:
     joke_to_delete = wortspiel_witze[0]
     dao.delete(joke_to_delete._id)
-    print_line("After Delete")
+    print("After Delete")
     wortspiel_witze = dao.get_category("Wortspiele")
     if wortspiel_witze:
         for witz in wortspiel_witze:
